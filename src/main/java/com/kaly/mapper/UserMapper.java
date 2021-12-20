@@ -1,10 +1,7 @@
 package com.kaly.mapper;
 
 import com.kaly.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
@@ -13,4 +10,13 @@ public interface UserMapper {
 
     @Select("select * from user where token = #{token}")
     User findUserByToken(@Param("token") String token);
+
+    @Select("select * from user where id = #{id}")
+    User getUserById(@Param("id") Integer id);
+
+    @Select("select * from user where account_id = #{accountId}")
+    User findUserByAccountId(@Param("accountId")String accountId);
+
+    @Update("update user set name=#{name},avatar_url=#{avatarUrl},token=#{token},gmt_modified=#{gmtModified} where id=#{id}")
+    void update(User user);
 }

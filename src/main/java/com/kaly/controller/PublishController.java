@@ -1,36 +1,53 @@
 package com.kaly.controller;
 
+import com.kaly.dto.QuestionDto;
 import com.kaly.mapper.QuestionMapper;
 import com.kaly.mapper.UserMapper;
 import com.kaly.model.Question;
 import com.kaly.model.User;
+import com.kaly.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class PublishController {
     @Autowired
-    private QuestionMapper questionMapper;
-    @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private QuestionService questionService;
 
+    @GetMapping("/publish/{id}")
+    public String edit (@PathVariable("id")Integer id,
+                        Model model) {
+        QuestionDto question = questionService.questionById(id);
+        model.addAttribute("title",question.getTitle());
+        model.addAttribute("description",question.getDescription());
+        model.addAttribute("tag",question.getTag());
+        model.addAttribute("id",question.getId());
+        return "publish";
+    }
     @GetMapping("/publish")
     public String publish(){
         return "publish";
     }
     @PostMapping("/publish")
-    public String doPublish(@RequestParam("title") String title, @RequestParam("tag")
-            String tag, @RequestParam("description") String description, Model model, HttpServletRequest request){
+    public String doPublish(@RequestParam("title") String title,
+                            @RequestParam("tag") String tag,
+                            @RequestParam("description") String description,
+                            @RequestParam("id") Integer id,
+                            Model model,
+                            HttpServletRequest request){
         model.addAttribute("title",title);
         model.addAttribute("tag",tag);
         model.addAttribute("description",description);
+        model.addAttribute("id",id);
 
         if ("".equals(title)) {
             model.addAttribute("error","标题不能为空");
@@ -45,21 +62,7 @@ public class PublishController {
             return "publish";
         }
 
-
-        Cookie[] cookies = request.getCookies();
-        User user = null;
-        if (cookies!=null) {
-            for (Cookie cookie : cookies) {
-                if ( "token".equals(cookie.getName()) ) {
-                    String token = cookie.getValue();
-                    user = userMapper.findUserByToken(token);
-                    if ( user!=null ) {
-                        request.getSession().setAttribute("user",user);
-                    }
-                    break;
-                }
-            }
-        }
+        User user =(User) request.getSession().getAttribute("user");
         if (user==null){
             model.addAttribute("error","用户未登录");
             return "publish";
@@ -68,10 +71,9 @@ public class PublishController {
         question.setTag(tag);
         question.setTitle(title);
         question.setDescription(description);
-        question.setGmtCreate(System.currentTimeMillis());
-        question.setGmtModified(question.getGmtCreate());
         question.setCreator(user.getId());
-        questionMapper.create(question);
+        question.setId(id);
+        questionService.createOrUpdate(question);
         return "redirect:/";
     }
 }
