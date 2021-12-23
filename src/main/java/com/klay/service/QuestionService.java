@@ -4,6 +4,7 @@ import com.klay.dto.PageinationDto;
 import com.klay.dto.QuestionDto;
 import com.klay.exception.CustomizeErrorCode;
 import com.klay.exception.CustomizeException;
+import com.klay.mapper.QuestionExtMapper;
 import com.klay.mapper.QuestionMapper;
 import com.klay.mapper.UserMapper;
 import com.klay.model.Question;
@@ -23,6 +24,8 @@ public class QuestionService {
     UserMapper userMapper;
     @Autowired
     QuestionMapper questionMapper;
+    @Autowired
+    QuestionExtMapper questionExtMapper;
 
     public PageinationDto list(Integer page, Integer size) {
         PageinationDto pageinationDto = new PageinationDto();
@@ -88,7 +91,7 @@ public class QuestionService {
         QuestionExample questionExample = new QuestionExample();
         questionExample.createCriteria()
                 .andCreatorEqualTo(userId);
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(new QuestionExample(),new RowBounds(offset,size));
+        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(new QuestionExample(),new RowBounds(offset,size));
         List<QuestionDto> questionDtoList = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -102,11 +105,11 @@ public class QuestionService {
     }
 
     public QuestionDto questionById(Integer id) {
-        QuestionDto questionDto = new QuestionDto();
-        if (questionDto == null) {
+        Question question = questionMapper.selectByPrimaryKey(id);
+        if (question == null) {
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
         }
-        Question question = questionMapper.selectByPrimaryKey(id);
+        QuestionDto questionDto = new QuestionDto();
         BeanUtils.copyProperties(question,questionDto);
         User user = userMapper.selectByPrimaryKey(question.getCreator());
         questionDto.setUser(user);
@@ -135,5 +138,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
