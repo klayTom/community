@@ -10,13 +10,16 @@ import com.klay.mapper.UserMapper;
 import com.klay.model.Question;
 import com.klay.model.QuestionExample;
 import com.klay.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -50,7 +53,9 @@ public class QuestionService {
         pageinationDto.setPageination(totalPage,page);
 
         Integer offset = size * (page-1);
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(new QuestionExample(),new RowBounds(offset,size));
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.setOrderByClause("gmt_create desc");
+        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample,new RowBounds(offset,size));
         List<QuestionDto> questionDtoList = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -63,7 +68,7 @@ public class QuestionService {
         return pageinationDto;
     }
 
-    public PageinationDto list(Integer userId, Integer page, Integer size) {
+    public PageinationDto list(Long userId, Integer page, Integer size) {
         PageinationDto pageinationDto = new PageinationDto();
         Integer totalPage;
 
@@ -104,7 +109,7 @@ public class QuestionService {
         return pageinationDto;
     }
 
-    public QuestionDto questionById(Integer id) {
+    public QuestionDto questionById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
         if (question == null) {
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
@@ -121,6 +126,9 @@ public class QuestionService {
             // 创建
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
+            question.setLikeCount(0);
+            question.setCommentCount(0);
+            question.setViewCount(0);
             questionMapper.insert(question);
         }else{
             // 更新
@@ -140,10 +148,29 @@ public class QuestionService {
         }
     }
 
-    public void incView(Integer id) {
+    public void incView(Long id) {
         Question question = new Question();
         question.setId(id);
         question.setViewCount(1);
         questionExtMapper.incView(question);
+    }
+
+    public List<QuestionDto> selectRelated(QuestionDto queryDto) {
+        if (StringUtils.isBlank(queryDto.getTag())) {
+            return new ArrayList<>();
+        }
+        String[] tags = StringUtils.split(queryDto.getTag(), ",");
+        String regexTag = Arrays.stream(tags).collect(Collectors.joining("|"));
+        Question question = new Question();
+        question.setId(queryDto.getId());
+        question.setTag(regexTag);
+
+        List<Question> questions = questionExtMapper.selectRelated(question);
+        List<QuestionDto> questionDtos = questions.stream().map(q -> {
+            QuestionDto questionDto = new QuestionDto();
+            BeanUtils.copyProperties(q,questionDto);
+            return questionDto;
+        }).collect(Collectors.toList());
+        return questionDtos;
     }
 }

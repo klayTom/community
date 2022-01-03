@@ -1,10 +1,12 @@
 package com.klay.controller;
 
+import com.klay.cache.TagCache;
 import com.klay.dto.QuestionDto;
 import com.klay.mapper.UserMapper;
 import com.klay.model.Question;
 import com.klay.model.User;
 import com.klay.service.QuestionService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,30 +25,33 @@ public class PublishController {
     private QuestionService questionService;
 
     @GetMapping("/publish/{id}")
-    public String edit (@PathVariable("id")Integer id,
+    public String edit (@PathVariable("id")Long id,
                         Model model) {
         QuestionDto question = questionService.questionById(id);
         model.addAttribute("title",question.getTitle());
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
         model.addAttribute("id",question.getId());
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
     @GetMapping("/publish")
-    public String publish(){
+    public String publish(Model model){
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
     @PostMapping("/publish")
-    public String doPublish(@RequestParam("title") String title,
-                            @RequestParam("tag") String tag,
-                            @RequestParam("description") String description,
-                            @RequestParam("id") Integer id,
+    public String doPublish(@RequestParam(value = "title",required = false) String title,
+                            @RequestParam(value = "tag",required = false) String tag,
+                            @RequestParam(value = "description",required = false) String description,
+                            @RequestParam(value = "id",required = false) Long id,
                             Model model,
                             HttpServletRequest request){
         model.addAttribute("title",title);
         model.addAttribute("tag",tag);
         model.addAttribute("description",description);
         model.addAttribute("id",id);
+        model.addAttribute("tags", TagCache.get());
 
         if ("".equals(title)) {
             model.addAttribute("error","标题不能为空");
@@ -58,6 +63,12 @@ public class PublishController {
         }
         if ("".equals(tag)){
             model.addAttribute("error","标签不能为空");
+            return "publish";
+        }
+
+        String invalid = TagCache.filterInvalid(tag);
+        if (StringUtils.isNotBlank(invalid)) {
+            model.addAttribute("error","输入非法标签:" + invalid);
             return "publish";
         }
 
