@@ -67,7 +67,7 @@ function collapseComments(e) {
             e.setAttribute("data-collapse", "in");
             e.classList.add("active");
         }else {
-            $.getJSON("/community/" + id, function (data) {
+            $.getJSON("/comment/" + id, function (data) {
                 $.each(data.data.reverse(), function (index,comment) {
                     var mediaBodyElement = $("<div/>",{
                         "class": "media-body",

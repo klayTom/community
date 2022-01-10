@@ -3,6 +3,7 @@ package com.klay.controller;
 import com.klay.dto.PageinationDto;
 import com.klay.mapper.UserMapper;
 import com.klay.model.User;
+import com.klay.service.NotificationService;
 import com.klay.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,8 @@ public class ProfileController {
     UserMapper userMapper;
     @Autowired
     QuestionService questionService;
-
+    @Autowired
+    NotificationService notificationService;
 
     @GetMapping("/profile/{action}")
     public String profile (HttpServletRequest request,
@@ -37,12 +39,14 @@ public class ProfileController {
         if ("questions".equals(action)) {
             model.addAttribute("section", "questions");
             model.addAttribute("sectionName","我的问题");
+            PageinationDto pageinationDto = questionService.list(user.getId(), page, size);
+            model.addAttribute("pageination",pageinationDto);
         }else if ("replies".equals(action)) {
+            PageinationDto pageinationDto = notificationService.list(user.getId(), page, size);
+            model.addAttribute("pageination",pageinationDto);
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
         }
-        PageinationDto pageinationDto = questionService.list(user.getId(), page, size);
-        model.addAttribute("pageination",pageinationDto);
         return "profile";
     }
 }

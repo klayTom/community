@@ -1,12 +1,12 @@
-create table comment
+create table notification
 (
-    id BIGINT auto_increment,
-    parent_id BIGINT not null,
+    id bigint auto_increment,
+    notifier bigint not null,
+    receiver bigint not null,
+    outer_id bigint not null,
     type int not null,
-    commentator int not null,
-    gmt_create BIGINT not null,
-    gmt_modified BIGINT not null,
-    like_count BIGINT default 0,
-    constraint COMMENT_PK
+    gmt_create bigint not null,
+    status int default 0 not null,
+    constraint NOTIFICATION_PK
         primary key (id)
 );
