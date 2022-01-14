@@ -2,6 +2,7 @@ package com.klay.service;
 
 import com.klay.dto.PageinationDto;
 import com.klay.dto.QuestionDto;
+import com.klay.dto.QuestionQueryDto;
 import com.klay.exception.CustomizeErrorCode;
 import com.klay.exception.CustomizeException;
 import com.klay.mapper.QuestionExtMapper;
@@ -30,12 +31,19 @@ public class QuestionService {
     @Autowired
     QuestionExtMapper questionExtMapper;
 
-    public PageinationDto list(Integer page, Integer size) {
-        PageinationDto pageinationDto = new PageinationDto();
+    public PageinationDto list(String search,Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
 
+        PageinationDto pageinationDto = new PageinationDto();
         Integer totalPage;
 
-        Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDto questionQueryDto = new QuestionQueryDto();
+        questionQueryDto.setSearch(search);
+
+        Integer totalCount = questionExtMapper.countBySearch(questionQueryDto);
 
         if (totalCount % size == 0) {
             totalPage = totalCount / size;
@@ -52,10 +60,14 @@ public class QuestionService {
 
         pageinationDto.setPageination(totalPage,page);
 
-        Integer offset = size * (page-1);
+        Integer offset = page < 1 ? 0 : size * (page-1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample,new RowBounds(offset,size));
+
+        questionQueryDto.setPage(offset);
+        questionQueryDto.setSize(size);
+
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDto);
         List<QuestionDto> questionDtoList = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());

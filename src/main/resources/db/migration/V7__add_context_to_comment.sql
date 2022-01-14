@@ -1,2 +1,2 @@
-alter table COMMENT
-    add context VARCHAR(1024);
+alter table comment
+    add context varchar(1024);

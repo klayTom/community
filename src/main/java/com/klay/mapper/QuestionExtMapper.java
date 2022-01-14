@@ -1,5 +1,6 @@
 package com.klay.mapper;
 
+import com.klay.dto.QuestionQueryDto;
 import com.klay.model.Question;
 import com.klay.model.QuestionExample;
 import org.apache.ibatis.annotations.Param;
@@ -13,4 +14,8 @@ public interface QuestionExtMapper {
     int incCommentCount(Question record);
 
     List<Question> selectRelated(Question question);
+
+    Integer countBySearch(QuestionQueryDto questionQueryDto);
+
+    List<Question> selectBySearch(QuestionQueryDto questionQueryDto);
 }
