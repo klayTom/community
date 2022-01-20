@@ -1,13 +1,13 @@
-create table question
+CREATE TABLE QUESTION
 (
-    id int auto_increment,
-    creator int,
-    title varchar(50),
-    description text,
-    tag varchar(256),
-    comment_count int default 0,
-    view_count int default 0,
-    like_count int default 0,
-    constraint question_pk
-        primary key (id)
+    ID            INT AUTO_INCREMENT,
+    CREATOR       INT,
+    TITLE         VARCHAR(50),
+    DESCRIPTION   TEXT,
+    TAG           VARCHAR(256),
+    COMMENT_COUNT INT DEFAULT 0,
+    VIEW_COUNT    INT DEFAULT 0,
+    LIKE_COUNT    INT DEFAULT 0,
+    CONSTRAINT QUESTION_PK
+        PRIMARY KEY (ID)
 );

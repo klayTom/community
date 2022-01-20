@@ -1,5 +1,5 @@
-alter table question
-    add gmt_create bigint;
+ALTER TABLE QUESTION
+    ADD GMT_CREATE BIGINT;
 
-alter table question
-    add gmt_modified bigint;
+ALTER TABLE QUESTION
+    ADD GMT_MODIFIED BIGINT;
