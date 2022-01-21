@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GithubUser {
+public class GiteeUser {
     private String name;
     private String dio;
     private Long id;

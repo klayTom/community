@@ -1,9 +1,9 @@
 package com.klay.controller;
 
 import com.klay.dto.AccessTokenDto;
-import com.klay.dto.GithubUser;
+import com.klay.dto.GiteeUser;
 import com.klay.model.User;
-import com.klay.provider.GithubProvider;
+import com.klay.provider.GiteeProvider;
 import com.klay.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.UUID;
 @Slf4j
 public class AuthorizeController {
     @Autowired
-    private GithubProvider githubProvider;
+    private GiteeProvider giteeProvider;
 
     @Value("${github.client.id}")
     private String clientId;
@@ -44,18 +44,18 @@ public class AuthorizeController {
         accessTokenDto.setRedirect_uri(redirectUri);
         accessTokenDto.setCode(code);
         accessTokenDto.setState(state);
-        String accessToken = githubProvider.getAccessToken(accessTokenDto);
+        String accessToken = giteeProvider.getAccessToken(accessTokenDto);
         //System.out.println(accessToken);
-        GithubUser githubUser = githubProvider.getUser(accessToken);
-        //System.out.println(githubUser.getName());
+        GiteeUser giteeUser = giteeProvider.getUser(accessToken);
+        //System.out.println(giteeUser.getAvatarUrl());
 
-        if (githubUser != null && githubUser.getId()!=null) {
+        if (giteeUser != null && giteeUser.getId()!=null) {
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
-            user.setName(githubUser.getName());
-            user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setAvatarUrl(githubUser.getAvatarUrl());
+            user.setName(giteeUser.getName());
+            user.setAccountId(String.valueOf(giteeUser.getId()));
+            user.setAvatarUrl(giteeUser.getAvatarUrl());
 
             userService.createOrUpdate(user);
             // 登陆成功 将用户保存到 session 域中
@@ -65,7 +65,7 @@ public class AuthorizeController {
             return "redirect:/";
         }else {
             // 登陆失败 ， 重新登录
-            log.error("callback get github error {}",githubUser);
+            log.error("callback get github error {}", giteeUser);
             return "redirect:/";
         }
     }

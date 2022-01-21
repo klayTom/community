@@ -45,7 +45,7 @@
 
   <select id="countBySearch" parameterType="com.klay.dto.QuestionQueryDto"
                    resultType="java.lang.Integer">
-    select count(*) from QUESTION
+    select count(*) from `QUESTION`
     <where>
       <if test="search != null and search != ''">
         and title regexp #{search}
@@ -55,7 +55,7 @@
 
   <select id="selectBySearch" parameterType="com.klay.dto.QuestionQueryDto"
                    resultMap="BaseResultMap">
-    select * from QUESTION
+    select * from `QUESTION`
     <where>
       <if test="search != null and search != ''">
         and title regexp #{search}
