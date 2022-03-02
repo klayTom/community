@@ -1,0 +1,167 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 09:50:39.799  INFO 3351053 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 3351053 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 09:50:39.816  INFO 3351053 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 09:50:42.743  INFO 3351053 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 09:50:42.773  INFO 3351053 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 09:50:42.774  INFO 3351053 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 09:50:42.902  INFO 3351053 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 09:50:42.902  INFO 3351053 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2927 ms
+2022-03-02 09:50:45.162  INFO 3351053 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 09:50:45.562  INFO 3351053 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 09:50:45.587  INFO 3351053 --- [           main] com.klay.CommunityApplication            : Started CommunityApplication in 7.044 seconds (JVM running for 8.219)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 09:51:02.138  INFO 3351124 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 3351124 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 09:51:02.146  INFO 3351124 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 09:51:05.308  INFO 3351124 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 09:51:05.339  INFO 3351124 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 09:51:05.339  INFO 3351124 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 09:51:05.481  INFO 3351124 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 09:51:05.481  INFO 3351124 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3187 ms
+2022-03-02 09:51:07.853  INFO 3351124 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 09:51:08.238  WARN 3351124 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-03-02 09:51:08.250  INFO 3351124 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-02 09:51:08.282  INFO 3351124 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-02 09:51:08.330 ERROR 3351124 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-03-02 09:54:03.806  INFO 3351053 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 09:54:03.806  INFO 3351053 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 09:54:03.808  INFO 3351053 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 09:54:04.001  INFO 3351053 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 09:54:04.913  INFO 3351053 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 11:59:31.699  INFO 3351053 --- [nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00u0x010x000x00q0x030x030x0f0xdc0x14G0x1bRH0x980xc1W0x0e0xf190x8fn_0x86KW0xbe0x9c[0x960x950x0bH0xc80xc70xe0I{0xb30x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x00.0x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x0a0x000x080x040x010x040x030x020x010x020x030xff0x010x000x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:269) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-03-02 12:22:01.581  INFO 3351053 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 12:22:01.715  INFO 3351053 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 12:42:48.406  INFO 5179 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 5179 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 12:42:48.414  INFO 5179 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 12:42:51.342  INFO 5179 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 12:42:51.380  INFO 5179 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 12:42:51.380  INFO 5179 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 12:42:51.522  INFO 5179 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 12:42:51.523  INFO 5179 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2963 ms
+2022-03-02 12:42:53.691  INFO 5179 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:42:54.159  INFO 5179 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 12:42:54.185  INFO 5179 --- [           main] com.klay.CommunityApplication            : Started CommunityApplication in 6.959 seconds (JVM running for 8.06)
+2022-03-02 12:42:59.647  INFO 5179 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 12:42:59.655  INFO 5179 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 12:42:59.656  INFO 5179 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 12:42:59.835  INFO 5179 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 12:43:00.524  INFO 5179 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 12:43:14.936  INFO 5179 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 12:43:14.959  INFO 5179 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 12:43:31.783  INFO 5376 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 5376 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 12:43:31.787  INFO 5376 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 12:43:34.726  INFO 5376 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 12:43:34.756  INFO 5376 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 12:43:34.756  INFO 5376 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 12:43:34.885  INFO 5376 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 12:43:34.885  INFO 5376 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2953 ms
+2022-03-02 12:43:37.059  INFO 5376 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:43:37.539  INFO 5376 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 12:43:37.569  INFO 5376 --- [           main] com.klay.CommunityApplication            : Started CommunityApplication in 7.031 seconds (JVM running for 8.192)
+2022-03-02 12:43:41.552  INFO 5376 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 12:43:41.553  INFO 5376 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 12:43:41.555  INFO 5376 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 12:43:41.739  INFO 5376 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 12:43:42.457  INFO 5376 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 13:13:53.994  INFO 11366 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 11366 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 13:13:54.000  INFO 11366 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 13:13:57.148  INFO 11366 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 13:13:57.298  INFO 11366 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3135 ms
+2022-03-02 13:13:59.636  INFO 11366 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 13:14:00.049  INFO 11366 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 13:14:00.084  INFO 11366 --- [           main] com.klay.CommunityApplication            : Started CommunityApplication in 7.287 seconds (JVM running for 8.402)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.1)
+
+2022-03-02 13:14:06.418  INFO 11484 --- [           main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 11484 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 13:14:06.424  INFO 11484 --- [           main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 13:14:09.430  INFO 11484 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 13:14:09.462  INFO 11484 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 13:14:09.462  INFO 11484 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 13:14:09.581  INFO 11484 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 13:14:09.581  INFO 11484 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3007 ms
+2022-03-02 13:14:11.917  INFO 11484 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 13:14:12.371  INFO 11484 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 13:14:12.400  INFO 11484 --- [           main] com.klay.CommunityApplication            : Started CommunityApplication in 7.18 seconds (JVM running for 8.307)
+2022-03-02 13:14:12.733  INFO 11484 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 13:14:12.734  INFO 11484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 13:14:12.739  INFO 11484 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-02 13:14:12.921  INFO 11484 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 13:14:13.644  INFO 11484 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

@@ -1,211 +1,134 @@
-2022-01-23 16:19:00.168  INFO 17600 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 17600 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:19:00.168  INFO 17600 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:19:00.214  INFO 17600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:19:00.214  INFO 17600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:19:01.636  INFO 17600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:19:01.652  INFO 17600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:19:01.652  INFO 17600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:19:01.746  INFO 17600 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:19:01.746  INFO 17600 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
-2022-01-23 16:19:01.777  INFO 17600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:19:01.902  INFO 17600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:19:01.902  INFO 17600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:19:02.433  INFO 17600 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:19:02.636  INFO 17600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:19:02.668  INFO 17600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:19:02.683  INFO 17600 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.953 seconds (JVM running for 4.125)
-2022-01-23 16:19:27.569  INFO 17600 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:19:27.569  INFO 17600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:19:27.569  INFO 17600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-01-23 16:19:34.230  WARN 17600 --- [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [155] milliseconds.
-2022-01-23 16:22:58.714  INFO 17600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:22:58.730  INFO 17600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:23:03.316  INFO 10364 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 10364 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:23:03.316  INFO 10364 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:23:03.363  INFO 10364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:23:03.363  INFO 10364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:23:04.425  INFO 10364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:23:04.441  INFO 10364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:23:04.441  INFO 10364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:23:04.504  INFO 10364 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:23:04.504  INFO 10364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1141 ms
-2022-01-23 16:23:04.535  INFO 10364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:23:04.629  INFO 10364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:23:04.629  INFO 10364 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:23:05.099  INFO 10364 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:23:05.247  INFO 10364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:23:05.278  INFO 10364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:23:05.278  INFO 10364 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.34 seconds (JVM running for 3.154)
-2022-01-23 16:23:25.766  INFO 10364 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:23:25.767  INFO 10364 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:23:25.767  INFO 10364 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-01-23 16:23:25.966  WARN 10364 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [161] milliseconds.
-2022-01-23 16:29:07.215  INFO 10364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:29:07.215  INFO 10364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:29:11.260  INFO 13020 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 13020 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:29:11.260  INFO 13020 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:29:11.307  INFO 13020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:29:11.307  INFO 13020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:29:12.268  INFO 13020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:29:12.284  INFO 13020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:29:12.284  INFO 13020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:29:12.346  INFO 13020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:29:12.346  INFO 13020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1039 ms
-2022-01-23 16:29:12.409  INFO 13020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:29:12.518  INFO 13020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:29:12.518  INFO 13020 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:29:12.979  INFO 13020 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:29:13.120  INFO 13020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:29:13.151  INFO 13020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:29:13.151  INFO 13020 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.222 seconds (JVM running for 2.976)
-2022-01-23 16:29:32.904  INFO 13020 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:29:32.904  INFO 13020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:29:32.905  INFO 13020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 16:38:07.515  INFO 13020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:38:07.523  INFO 13020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:38:11.726  INFO 11168 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 11168 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:38:11.728  INFO 11168 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:38:11.804  INFO 11168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:38:11.805  INFO 11168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:38:12.866  INFO 11168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:38:12.874  INFO 11168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:38:12.874  INFO 11168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:38:12.935  INFO 11168 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:38:12.936  INFO 11168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
-2022-01-23 16:38:12.976  INFO 11168 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:38:13.066  INFO 11168 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:38:13.072  INFO 11168 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:38:13.536  INFO 11168 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:38:13.679  INFO 11168 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:38:13.706  INFO 11168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:38:13.716  INFO 11168 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.408 seconds (JVM running for 3.2)
-2022-01-23 16:38:22.791  INFO 11168 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:38:22.792  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:38:22.793  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 16:42:15.977  INFO 11168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:42:15.984  INFO 11168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:42:20.081  INFO 8068 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 8068 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:42:20.082  INFO 8068 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:42:20.125  INFO 8068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:42:20.125  INFO 8068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:42:21.058  INFO 8068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:42:21.065  INFO 8068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:42:21.065  INFO 8068 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:42:21.130  INFO 8068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:42:21.131  INFO 8068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1005 ms
-2022-01-23 16:42:21.154  INFO 8068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:42:21.238  INFO 8068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:42:21.245  INFO 8068 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:42:21.732  INFO 8068 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:42:21.892  INFO 8068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:42:21.924  INFO 8068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:42:21.934  INFO 8068 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.205 seconds (JVM running for 3.059)
-2022-01-23 16:42:25.638  INFO 8068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:42:25.639  INFO 8068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:42:25.640  INFO 8068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 16:47:07.189  INFO 8068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:47:07.196  INFO 8068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:49:33.061  INFO 10732 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 10732 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:49:33.062  INFO 10732 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:49:33.100  INFO 10732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:49:33.102  INFO 10732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:49:34.002  INFO 10732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:49:34.009  INFO 10732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:49:34.009  INFO 10732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:49:34.064  INFO 10732 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:49:34.064  INFO 10732 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 962 ms
-2022-01-23 16:49:34.105  INFO 10732 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:49:34.193  INFO 10732 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:49:34.200  INFO 10732 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:49:34.725  INFO 10732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:49:34.864  INFO 10732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:49:34.891  INFO 10732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:49:34.900  INFO 10732 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.16 seconds (JVM running for 2.936)
-2022-01-23 16:49:36.863  INFO 10732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:49:36.871  INFO 10732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:51:51.320  INFO 10764 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 10764 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:51:51.321  INFO 10764 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:51:51.362  INFO 10764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:51:51.362  INFO 10764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:51:52.390  INFO 10764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:51:52.400  INFO 10764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:51:52.400  INFO 10764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:51:52.483  INFO 10764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:51:52.483  INFO 10764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
-2022-01-23 16:51:52.508  INFO 10764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:51:52.604  INFO 10764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:51:52.612  INFO 10764 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:51:53.087  INFO 10764 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:51:53.238  INFO 10764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:51:53.268  INFO 10764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:51:53.278  INFO 10764 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.32 seconds (JVM running for 3.289)
-2022-01-23 16:52:04.294  INFO 10764 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:52:04.295  INFO 10764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:52:04.296  INFO 10764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 16:52:04.550  WARN 10764 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [164] milliseconds.
-2022-01-23 16:59:36.908  INFO 10764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 16:59:36.917  INFO 10764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 16:59:41.631  INFO 2228 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 2228 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 16:59:41.632  INFO 2228 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 16:59:41.674  INFO 2228 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 16:59:41.674  INFO 2228 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 16:59:42.666  INFO 2228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 16:59:42.673  INFO 2228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 16:59:42.674  INFO 2228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 16:59:42.734  INFO 2228 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 16:59:42.734  INFO 2228 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
-2022-01-23 16:59:42.769  INFO 2228 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 16:59:42.858  INFO 2228 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 16:59:42.865  INFO 2228 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 16:59:43.346  INFO 2228 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 16:59:43.494  INFO 2228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 16:59:43.524  INFO 2228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 16:59:43.534  INFO 2228 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.239 seconds (JVM running for 3.109)
-2022-01-23 16:59:49.692  INFO 2228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 16:59:49.693  INFO 2228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 16:59:49.694  INFO 2228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 16:59:49.917  WARN 2228 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [153] milliseconds.
-2022-01-23 17:03:04.985  INFO 2228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 17:03:04.992  INFO 2228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 17:03:09.419  INFO 4312 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 4312 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 17:03:09.420  INFO 4312 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 17:03:09.466  INFO 4312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 17:03:09.466  INFO 4312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 17:03:10.498  INFO 4312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 17:03:10.506  INFO 4312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 17:03:10.506  INFO 4312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 17:03:10.588  INFO 4312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 17:03:10.588  INFO 4312 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1121 ms
-2022-01-23 17:03:10.612  INFO 4312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 17:03:10.708  INFO 4312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 17:03:10.715  INFO 4312 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 17:03:11.175  INFO 4312 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 17:03:11.327  INFO 4312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 17:03:11.357  INFO 4312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 17:03:11.366  INFO 4312 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.28 seconds (JVM running for 3.058)
-2022-01-23 17:03:18.662  INFO 4312 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 17:03:18.663  INFO 4312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 17:03:18.663  INFO 4312 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-01-23 17:04:09.212  INFO 4312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 17:04:09.221  INFO 4312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-01-23 17:04:47.027  INFO 3476 --- [restartedMain] com.klay.CommunityApplication            : Starting CommunityApplication using Java 11.0.10 on LAPTOP-VDLKFNTV with PID 3476 (E:\community\target\classes started by respe in E:\community)
-2022-01-23 17:04:47.029  INFO 3476 --- [restartedMain] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
-2022-01-23 17:04:47.075  INFO 3476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-23 17:04:47.077  INFO 3476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-23 17:04:48.091  INFO 3476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-01-23 17:04:48.099  INFO 3476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-23 17:04:48.100  INFO 3476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
-2022-01-23 17:04:48.165  INFO 3476 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-23 17:04:48.166  INFO 3476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
-2022-01-23 17:04:48.205  INFO 3476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-01-23 17:04:48.289  INFO 3476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-01-23 17:04:48.295  INFO 3476 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/community'
-2022-01-23 17:04:48.759  INFO 3476 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-01-23 17:04:48.906  INFO 3476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-23 17:04:48.935  INFO 3476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-01-23 17:04:48.944  INFO 3476 --- [restartedMain] com.klay.CommunityApplication            : Started CommunityApplication in 2.245 seconds (JVM running for 3.078)
-2022-01-23 17:04:57.765  INFO 3476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-23 17:04:57.766  INFO 3476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-23 17:04:57.767  INFO 3476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-01-23 17:06:36.266  INFO 3476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-01-23 17:06:36.273  INFO 3476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-02 09:50:39.799  INFO 3351053 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 3351053 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 09:50:39.816  INFO 3351053 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 09:50:42.743  INFO 3351053 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 09:50:42.773  INFO 3351053 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 09:50:42.774  INFO 3351053 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 09:50:42.902  INFO 3351053 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 09:50:42.902  INFO 3351053 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2927 ms
+2022-03-02 09:50:45.162  INFO 3351053 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 09:50:45.562  INFO 3351053 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 09:50:45.587  INFO 3351053 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 7.044 seconds (JVM running for 8.219)
+2022-03-02 09:51:02.138  INFO 3351124 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 3351124 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 09:51:02.146  INFO 3351124 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 09:51:05.308  INFO 3351124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 09:51:05.339  INFO 3351124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 09:51:05.339  INFO 3351124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 09:51:05.481  INFO 3351124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 09:51:05.481  INFO 3351124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3187 ms
+2022-03-02 09:51:07.853  INFO 3351124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 09:51:08.238  WARN 3351124 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-03-02 09:51:08.250  INFO 3351124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-02 09:51:08.282  INFO 3351124 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-02 09:51:08.330 ERROR 3351124 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-03-02 09:54:03.806  INFO 3351053 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 09:54:03.806  INFO 3351053 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 09:54:03.808  INFO 3351053 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 09:54:04.001  INFO 3351053 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 09:54:04.913  INFO 3351053 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 11:59:31.699  INFO 3351053 --- [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00u0x010x000x00q0x030x030x0f0xdc0x14G0x1bRH0x980xc1W0x0e0xf190x8fn_0x86KW0xbe0x9c[0x960x950x0bH0xc80xc70xe0I{0xb30x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x00.0x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x0a0x000x080x040x010x040x030x020x010x020x030xff0x010x000x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:269) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-03-02 12:22:01.581  INFO 3351053 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 12:22:01.715  INFO 3351053 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-02 12:40:40.035  INFO 4670 --- [main] com.klay.CommunityApplicationTests       : Starting CommunityApplicationTests using Java 11.0.13 on VM-12-16-ubuntu with PID 4670 (started by klay in /home/klay/community)
+2022-03-02 12:40:40.041  INFO 4670 --- [main] com.klay.CommunityApplicationTests       : No active profile set, falling back to default profiles: default
+2022-03-02 12:40:45.892  INFO 4670 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:40:46.563  INFO 4670 --- [main] com.klay.CommunityApplicationTests       : Started CommunityApplicationTests in 7.204 seconds (JVM running for 10.098)
+2022-03-02 12:41:38.334  INFO 4917 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 4917 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 12:41:38.343  INFO 4917 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 12:41:41.295  INFO 4917 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 12:41:41.327  INFO 4917 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 12:41:41.331  INFO 4917 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 12:41:41.477  INFO 4917 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 12:41:41.479  INFO 4917 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2997 ms
+2022-03-02 12:41:43.776  INFO 4917 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:41:44.238  INFO 4917 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 12:41:44.263  INFO 4917 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 7.143 seconds (JVM running for 8.251)
+2022-03-02 12:41:53.109  INFO 4917 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 12:41:53.110  INFO 4917 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 12:41:53.115  INFO 4917 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-02 12:41:53.314  INFO 4917 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 12:41:54.336  INFO 4917 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 12:42:05.853  INFO 4917 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 12:42:05.874  INFO 4917 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-02 12:42:48.406  INFO 5179 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 5179 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 12:42:48.414  INFO 5179 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 12:42:51.342  INFO 5179 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 12:42:51.380  INFO 5179 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 12:42:51.380  INFO 5179 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 12:42:51.522  INFO 5179 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 12:42:51.523  INFO 5179 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2963 ms
+2022-03-02 12:42:53.691  INFO 5179 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:42:54.159  INFO 5179 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 12:42:54.185  INFO 5179 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 6.959 seconds (JVM running for 8.06)
+2022-03-02 12:42:59.647  INFO 5179 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 12:42:59.655  INFO 5179 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 12:42:59.656  INFO 5179 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 12:42:59.835  INFO 5179 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 12:43:00.524  INFO 5179 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 12:43:14.936  INFO 5179 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-02 12:43:14.959  INFO 5179 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-02 12:43:31.783  INFO 5376 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 5376 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 12:43:31.787  INFO 5376 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 12:43:34.726  INFO 5376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 12:43:34.756  INFO 5376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 12:43:34.756  INFO 5376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 12:43:34.885  INFO 5376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 12:43:34.885  INFO 5376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2953 ms
+2022-03-02 12:43:37.059  INFO 5376 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 12:43:37.539  INFO 5376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 12:43:37.569  INFO 5376 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 7.031 seconds (JVM running for 8.192)
+2022-03-02 12:43:41.552  INFO 5376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 12:43:41.553  INFO 5376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 12:43:41.555  INFO 5376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-02 12:43:41.739  INFO 5376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 12:43:42.457  INFO 5376 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-02 13:13:53.994  INFO 11366 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 11366 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 13:13:54.000  INFO 11366 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 13:13:57.148  INFO 11366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 13:13:57.298  INFO 11366 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3135 ms
+2022-03-02 13:13:59.636  INFO 11366 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 13:14:00.049  INFO 11366 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 13:14:00.084  INFO 11366 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 7.287 seconds (JVM running for 8.402)
+2022-03-02 13:14:06.418  INFO 11484 --- [main] com.klay.CommunityApplication            : Starting CommunityApplication v0.0.1-SNAPSHOT using Java 11.0.13 on VM-12-16-ubuntu with PID 11484 (/home/klay/community/target/community-0.0.1-SNAPSHOT.jar started by klay in /home/klay/community)
+2022-03-02 13:14:06.424  INFO 11484 --- [main] com.klay.CommunityApplication            : No active profile set, falling back to default profiles: default
+2022-03-02 13:14:09.430  INFO 11484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-02 13:14:09.462  INFO 11484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-02 13:14:09.462  INFO 11484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-02 13:14:09.581  INFO 11484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-02 13:14:09.581  INFO 11484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3007 ms
+2022-03-02 13:14:11.917  INFO 11484 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-02 13:14:12.371  INFO 11484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 13:14:12.400  INFO 11484 --- [main] com.klay.CommunityApplication            : Started CommunityApplication in 7.18 seconds (JVM running for 8.307)
+2022-03-02 13:14:12.733  INFO 11484 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 13:14:12.734  INFO 11484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-02 13:14:12.739  INFO 11484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-02 13:14:12.921  INFO 11484 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-02 13:14:13.644  INFO 11484 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
